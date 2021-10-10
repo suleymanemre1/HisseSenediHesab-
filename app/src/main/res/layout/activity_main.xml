@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/sirket_degeri_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:layout_marginBottom="413dp"
+        android:ems="10"
+        android:hint="Şireketin Değeri"
+        android:inputType="none|number"
+        app:layout_constraintBottom_toTopOf="@+id/switch1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/hisse_sayisi_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:ems="10"
+        android:hint="Hisse Sayısı"
+        android:inputType="none|number"
+        app:layout_constraintBottom_toTopOf="@+id/bir_hissenin_degeri_text"
+        app:layout_constraintStart_toStartOf="@+id/sirket_degeri_text"
+        app:layout_constraintTop_toBottomOf="@+id/sirket_degeri_text" />
+
+    <Button
+        android:id="@+id/hesapla1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="69dp"
+        android:text="@string/button_name"
+        app:layout_constraintBottom_toTopOf="@+id/tr_text"
+        app:layout_constraintEnd_toEndOf="@+id/bir_hissenin_degeri_text"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="@+id/bir_hissenin_degeri_text"
+        app:layout_constraintTop_toBottomOf="@+id/bir_hissenin_degeri_text" />
+
+    <EditText
+        android:id="@+id/tr_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Hisse Sayınız"
+        android:inputType="none|number"
+        app:layout_constraintBottom_toTopOf="@+id/toplam_hisse_degeriniz"
+        app:layout_constraintStart_toStartOf="@+id/toplam_hisse_degeriniz"
+        app:layout_constraintTop_toBottomOf="@+id/hesapla1" />
+
+    <Button
+        android:id="@+id/hesapla2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="154dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="58dp"
+        android:text="@string/button_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/switch1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toplam_hisse_degeriniz" />
+
+    <TextView
+        android:id="@+id/bir_hissenin_degeri_text"
+        android:layout_width="184dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="19dp"
+        android:hint="Bir Hisse Değeri"
+        android:inputType="none|number"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/hesapla1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hisse_sayisi_text" />
+
+    <TextView
+        android:id="@+id/toplam_hisse_degeriniz"
+        android:layout_width="228dp"
+        android:layout_height="77dp"
+        android:layout_marginBottom="25dp"
+        android:hint="Toplam Hisse Değeriniz"
+        android:inputType="none|number"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/hesapla2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tr_text" />
+
+
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switch1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="45dp"
+        android:text="Varlığı Gizle"
+        android:textColor="#5E92F3"
+        android:textColorHighlight="#5E92F3"
+        android:textColorLink="#5E92F3"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/hesapla2"
+        app:layout_constraintTop_toBottomOf="@+id/sirket_degeri_text" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
